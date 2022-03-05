@@ -63,7 +63,7 @@ br {
 }
 
 #submit {
-    transition-duration: 0.1;
+    transition-duration: 0.1s;
     border: 0px solid transparent;
     color: white;
     background-color: rgb(117,172,225);
@@ -72,7 +72,7 @@ br {
 }
 
 #submit:focus {
-    transition-duration: 0.1;
+    transition-duration: 0.1s;
     padding: 0;
     background-color: rgb(57, 148, 233);
 }
