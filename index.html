@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <link rel="stylesheet" href="new.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" id="form">
+        <div id="formular">
+            <label for="anrede">Anrede</label>
+            <select id="anrede">
+                <option disabled selected>Auswahl</option>
+                <option value="Herr">Herr</option>
+                <option value="Frau">Frau</option>
+            </select>
+            
+            <br><br>
+            <label for="vorname">Vorname</label>
+            <input type="text" id="vorname" placeholder="Max">
+            
+            <br><br>
+            <label for="nachname" class="pflicht">Nachname</label>
+            <input type="text" id="nachname" name="nachname" placeholder="Mustermann" required>
+            
+            <br><br>
+            <div id="adressfeld">
+                <p>Adressfeld</p>
+                <label for="">Strasse</label>
+                <input type="test" placeholder="Musterweg">
+                
+                <br><br>
+                <label for="">Hausnummer</label>
+                <input type="text" min="1" placeholder="12 / 1">
+                
+                <br><br>
+                <label for="" class="pflicht">Postleitzahl</label>
+                <input type="tel" name="" id="" minlength=5 maxlength="5" placeholder="12345" required>
+                
+                <br><br>
+                <label for="">Ort / Stadt</label>
+                <input type="text" name="" id="" placeholder="Musterhausen">
+
+            </div>
+            <br>
+            <label class="pflicht">Email</label>
+            <input type="text" required placeholder="max.mustermann@mail.com">
+            <br>
+            <input type="submit" name="" id="submit" value="Weiter">
+
+            <datalist id="auswahl">
+                <option value="Test1"></option>
+                <option value="Test2"></option>
+            </datalist>
+
+        </div>
+    </form>
+
+</body>
+
+</html>
