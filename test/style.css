@@ -1,0 +1,92 @@
+body {
+    font-family: roboto;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.umfeld {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    max-width: calc(200px * 5);
+    max-height: calc(200px * 5);
+}
+
+.square {
+    color: white;
+    background-color: blue;
+    box-shadow: inset 0px 0px 0px 10px green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+/* adjust width */
+@media screen and (min-width: calc(200px * 0)) {
+    .square {
+        width: calc(100% / 1);
+        background-color: aqua;
+    }
+}
+@media screen and (min-width: calc(200px * 2)) {
+    .square {
+        width: calc(100% / 2);
+        background-color: aqua;
+    }
+}
+@media screen and (min-width: calc(200px * 3)) {
+    .square {
+        width: calc(100% / 3);
+        background-color: aqua;
+    }
+}
+@media screen and (min-width: calc(200px * 4)) {
+    .square {
+        width: calc(100% / 4);
+        background-color: aqua;
+    }
+}
+@media screen and (min-width: calc(200px * 5)) {
+    .square {
+        width: calc(100% / 5);
+        background-color: aqua;
+    }
+}
+
+/* adjust height */
+@media screen and (min-height: calc(200px * 0)) {
+    .square {
+        height: calc(100% / 1);
+        background-color: aqua;
+    }
+}
+@media screen and (min-height: calc(200px * 2)) {
+    .square {
+        height: calc(100% / 2);
+        background-color: aqua;
+    }
+}
+@media screen and (min-height: calc(200px * 3)) {
+    .square {
+        height: calc(100% / 3);
+        background-color: aqua;
+    }
+}
+@media screen and (min-height: calc(200px * 4)) {
+    .square {
+        height: calc(100% / 4);
+        background-color: aqua;
+    }
+}
+@media screen and (min-height: calc(200px * 5)) {
+    .square {
+        height: calc(100% / 5);
+        background-color: aqua;
+    }
+}

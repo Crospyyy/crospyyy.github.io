@@ -1,0 +1,90 @@
+::selection {
+    color: white;
+    background-color: rgb(79, 207, 216);
+}
+
+body::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--background-color);
+}
+body::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-color);
+    border-radius: 20px;
+    border: 3px solid var(--background-color);
+}
+body::-webkit-scrollbar-thumb:hover {
+    transition-duration: 0.3s;
+    background-color: var(--scrollbar-color-hover);
+    border-radius: 20px;
+    border: var(--scrollbar-padding) solid var(--background-color);
+}
+.shadow_inset {
+    cursor: pointer;
+    transition-duration: 0.3s;
+    box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.7) inset,
+        0px 0px 0px rgba(0, 0, 0, 0.1) inset;
+}
+
+.shadow_inset:hover {
+    transition-duration: 0.3s;
+    box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.7) inset,
+        3px 3px 5px rgba(0, 0, 0, 0.1) inset;
+}
+
+.shadow_outset {
+    transition-duration: 0.3s;
+    /* box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.7),
+        3px 3px 5px rgba(0, 0, 0, 0.1),
+        0px 0px 0px rgba(255, 255, 255, 0.7) inset,
+        0px 0px 0px rgba(0, 0, 0, 0.1) inset; */
+    box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.7),
+        0px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+.shadow_outset:hover {
+    /* box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.7),
+        0px 0px 0px rgba(0, 0, 0, 0.1),
+        -3px -3px 7px rgba(255, 255, 255, 0.7) inset,
+        3px 3px 5px rgba(0, 0, 0, 0.1) inset; */
+    box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.7),
+        3px 3px 5px rgba(0, 0, 0, 0.1);
+    transition-duration: 0.3s;
+}
+
+.shadow_outset_constant {
+    box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.7),
+        3px 3px 5px rgba(0, 0, 0, 0.1);
+    transition-duration: 0.3s;
+}
+
+.bar {
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+    border-radius: 17px;
+    padding: 7px;
+}
+
+.new {
+    width: 10cm;
+    height: 2cm;
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px 0px transparent;
+    transition-duration: 0.3s;
+}
+
+.new:hover {
+    box-shadow: 0px 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition-duration: 0.3s;
+}
+
+.stop {
+    content: "stooooooop";
+    background-color: red;
+    /* filter: blur(0px); */
+    /* transition-duration: unset; */
+}

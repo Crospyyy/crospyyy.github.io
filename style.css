@@ -1,5 +1,208 @@
-.first {
-    width: 100px;
-    height: 100px;
+body {
+    color: black;
+}
+
+a {
+    /* color: rgb(47, 125, 131); */
+    color: rgb(0, 168, 180);
+    /* background-color: rgba(79, 207, 216, 0.2); */
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+h1 {
+    /* font-size: 2em; */
+    /* font-weight: 400; */
+}
+
+.button {
+    border: 0px solid var(--background-color);
+    text-decoration: none;
+    color: var(--button-text-color);
+    background-color: var(--button-background);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    height: 40px;
+    border-radius: 7px;
+    transition-duration: 0.2s;
+}
+
+.top-bar .button {
+    width: 80px;
+}
+
+.button:hover {
+    color: rgb(19, 19, 19);
+    transition-duration: 0.2s;
+    /* border-color: var(--accent-color); */
+    /* border-bottom-width: 5px; */
+    background-color: var(--button-background-hover);
+    /* box-shadow: inset 0px -40px 0px var(--accent-color); */
+}
+
+.button:active {
+    transition-duration: 0.3s;
+    font-size: 1em;
+    background-color: var(--button-background-clicked);
+    /* box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.7),
+        3px 3px 5px rgba(0, 0, 0, 0.1),
+        -3px -3px 7px rgba(255, 255, 255, 0.7) inset,
+        3px 3px 5px rgba(0, 0, 0, 0.1) inset; */
+}
+
+.article-bar {
+    /* width: min(max(60%, 400px), 900px); */
+    width: max-content;
+    gap: 7px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: Roboto;
+    padding: 0;
+    margin: 0;
+}
+
+.top-bar {
+    box-sizing: border-box;
+    background-color: var(--bar-background);
+    /* border: 3px solid red; */
+    top: 0;
+    position: fixed;
+    display: flex;
+    gap: 7px;
+    padding: 7px;
+    justify-content: space-between;
+    z-index: 1;
+    width: 100%;
+    height: 54px;
+    /* width: 100%; */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+}
+
+.rest {
+    padding-top: 80px;
+    padding-left: 40px;
+    padding-right: 40px;
+    width: auto;
+    /* border: 20px solid red; */
+    /* z-index: -1; */
+}
+
+.article {
+    /* transform: ; */
+    margin: 0;
+    padding: 0;
     background-color: red;
+    height: 0;
+    min-height: 0;
+    overflow: hidden;
+}
+
+img {
+    border-radius: 10px;
+    max-width: 100%;
+    max-height: 50vh;
+}
+
+:root {
+    --accent-color: hsl(0, 0%, 61%);
+
+    --button-text-color: hsl(0, 0%, 0%);
+    --button-background: var(--background-color);
+    --button-background-hover: rgb(241, 241, 241);
+    --button-background-clicked: rgb(224, 224, 224);
+
+    --scrollbar-color: hsl(0, 0%, 53%);
+    --scrollbar-color-hover: hsl(0, 0%, 39%);
+    --scrollbar-padding: 3px;
+    --scrollbar-width: 10px;
+
+    --background-color: hsl(0, 0%, 100%);
+    --bar-background: hsl(0, 0%, 100%);
+    --shadow: 0px 0px 0px hsla(0, 0%, 100%, 0.7),
+        0px 0px 0px hsla(0, 0%, 0%, 0.1);
+}
+
+@media screen and (min-width: 900px) {
+    .rest {
+        padding: 80px 4.5%;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .top-bar .button {
+        width: auto;
+        min-width: fit-content;
+        transition-duration: 0s;
+    }
+    .article-bar {
+        transition-duration: 0s;
+    }
+}
+@media screen and (max-width: 800px) {
+    .article-bar .button {
+        /* transition-duration: 0.3s; */
+        height: 0;
+        min-height: 0;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+        /* width: fit-content; */
+    }
+
+    .article-bar {
+        border-width: 0 7px 7px 7px;
+        border-color: transparent;
+        border-style: solid;
+        border-radius: 14px;
+        /* padding: 0, 7px, 7px, 7px; */
+        height: max-content;
+        flex-direction: column;
+        gap: 0px;
+        width: 60%;
+        overflow: hidden;
+        background-color: var(--background-color);
+        /* transition-duration: 0.3s; */
+    }
+
+    .article-bar::before {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 40px;
+        margin: 0;
+        content: "Artikel";
+        /* background-color: brown; */
+        /* transition-duration: 1s; */
+    }
+
+    .article-bar:hover {
+        border-width: 7px 7px 7px 7px;
+        gap: 7px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+        /* transition-duration: 0.3s; */
+    }
+    .article-bar:hover .button {
+        height: 40px;
+        /* transition-duration: 0.3s; */
+    }
+
+    .article-bar:hover::before {
+        font-size: 1.5em;
+        font-weight: 400;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .rest {
+        padding: 60px 10px;
+    }
 }
